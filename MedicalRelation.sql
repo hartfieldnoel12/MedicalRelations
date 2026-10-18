@@ -1,12 +1,12 @@
 
--- Create the database
+
 CREATE DATABASE PatientManagementDB;
 GO
 
 USE PatientManagementDB;
 GO
 
--- 1. Patients Entity
+
 CREATE TABLE Patients (
     PatientID INT IDENTITY(1,1) PRIMARY KEY,
     FirstName VARCHAR(50) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE Patients (
     Address VARCHAR(255)
 );
 
--- 2. Doctors Entity
+
 CREATE TABLE Doctors (
     DoctorID INT IDENTITY(1,1) PRIMARY KEY,
     FirstName VARCHAR(50) NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE Doctors (
     Email VARCHAR(100) UNIQUE
 );
 
--- 3. Appointments Entity
+
 CREATE TABLE Appointments (
     AppointmentID INT IDENTITY(1,1) PRIMARY KEY,
     PatientID INT NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE Appointments (
         ))
 );
 
--- 4. Medical Records Entity
+
 CREATE TABLE MedicalRecords (
     RecordID INT IDENTITY(1,1) PRIMARY KEY,
     PatientID INT NOT NULL,
@@ -76,7 +76,7 @@ CREATE TABLE MedicalRecords (
         REFERENCES Appointments(AppointmentID)
 );
 
--- 5. Prescriptions Entity
+
 CREATE TABLE Prescriptions (
     PrescriptionID INT IDENTITY(1,1) PRIMARY KEY,
     PatientID INT NOT NULL,
