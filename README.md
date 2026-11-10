@@ -1,4 +1,4 @@
-#Can be converted into SQL Studio managment by removing go command
+
 
 # Patient Management System
 
