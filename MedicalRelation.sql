@@ -1,4 +1,4 @@
-
+--Can be converted into management by removing the GO command
 
 CREATE DATABASE PatientManagementDB;
 GO
